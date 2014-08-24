@@ -5,7 +5,7 @@
     "env": {
         "IDOBATA_HOOK_URL": "<idobata-hook-url>",
         "PUKIWIKI_RSS_URL": "<pukiwiki-rss-url>"
-    }
+    },
     "addons": [
         "redistogo:nano",
         "scheduler:standard"
