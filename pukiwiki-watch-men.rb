@@ -16,7 +16,12 @@ class PukiWikiRssReader
       f.read
     end
 
-    @redis = Redis.new
+    if ENV["REDISTOGO_URL"]
+      uri = URI.parse(ENV["REDISTOGO_URL"])
+      @redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+    else
+      @redis = Redis.new
+    end
 
     @rss = nil
     begin
@@ -95,8 +100,6 @@ end
 pukiWikiRssReader = PukiWikiRssReader.new(rss_url)
 new_items = pukiWikiRssReader.get_new_items
 
-
-# hook_url = "https://idobata.io/hook/e6f12db1-99b6-4033-87fe-a3e474234861" #for test
 Idobata.hook_url = hook_url
 
 new_items.each do |item|
