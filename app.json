@@ -1,0 +1,6 @@
+{
+  "name": "pukiwiki-idobata",
+  "description": "pukiwiki rss notify idobata.io"
+  "repository": "https://github.com/FromAtom/pukiwiki-idobata.git",
+  "keywords": ["ruby", "pukiwiki", "idobata.io"]
+}
