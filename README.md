@@ -13,12 +13,13 @@ $ heroku config:set PUKIWIKI_RSS_URL=<pukiwiki-rss-url>
 ```
 
 ## Requier Add-Ons
+You do not need to do the following process if you use the `Heroku Button`.
 
 ### Redis To Go
 
 ```sh
 $ heroku addons:add redistogo
-$ heroku config:set REDISTOGO_URL=<redistogo-url>
+
 ```
 
 ### Heroku Scheduler
@@ -26,5 +27,5 @@ $ heroku config:set REDISTOGO_URL=<redistogo-url>
 ```sh
 $ heroku addons:add scheduler:standard
 ```
-
-and add a job `bundle exec ruby pukiwiki-watch-men.rb`.
+## Set job
+Add a job `bundle exec ruby pukiwiki-watch-men.rb` on heroku scheduler.
