@@ -100,6 +100,7 @@ Idobata.hook_url = hook_url
 
 new_items.each do |item|
   source = "『#{item['title']}』が更新されました。 - #{item['link']}"
-  Idobata::Message.create(source: source, label: { type: :warning, text: "HIT Wiki" })
+  label_text = "RSS"
+  Idobata::Message.create(source: source, label: { type: :warning, text: label_text })
   puts "SEND: #{source}"
 end
