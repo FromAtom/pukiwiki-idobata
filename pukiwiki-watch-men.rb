@@ -64,7 +64,7 @@ class PukiWikiRssReader
     previous_items.each do |previous_item|
       date = previous_item['date']
       title = previous_item['title']
-      return true if (date == item.pubDate.to_s && title == item.title)
+      return false if (date == item.pubDate.to_s && title == item.title)
     end
 
     return true
