@@ -1,10 +1,13 @@
 {
     "name": "pukiwiki-idobata",
-    "description": "pukiwiki rss notify idobata.io"
+    "description": "Pukiwiki rss items notify idobata.io",
     "repository": "https://github.com/FromAtom/pukiwiki-idobata.git",
+    "env": {
+        "IDOBATA_HOOK_URL": "<idobata-hook-url>",
+        "PUKIWIKI_RSS_URL": "<pukiwiki-rss-url>"
+    }
     "addons": [
-        "redistogo",
+        "redistogo:nano",
         "scheduler:standard"
     ]
-
 }
