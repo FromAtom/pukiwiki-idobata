@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    faraday (0.8.9)
+      multipart-post (~> 1.2.0)
+    idobata (0.0.7)
+      faraday (~> 0.8.8)
+    multipart-post (1.2.0)
+    redis (3.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  idobata
+  redis
