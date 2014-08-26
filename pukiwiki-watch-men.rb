@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/ruby
 
-require 'Googl'
 require 'rubygems'
 require 'uri'
 require 'rss'
 require 'redis'
 require 'json'
 require 'idobata'
+require 'googl'
 
 class PukiWikiRssReader
   def initialize (rss_url)
