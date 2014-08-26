@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 #!/usr/bin/ruby
 
+require 'Googl'
 require 'rubygems'
 require 'uri'
 require 'rss'
@@ -99,7 +100,11 @@ new_items = pukiWikiRssReader.get_new_items
 Idobata.hook_url = hook_url
 
 new_items.each do |item|
-  source = "『#{item['title']}』が更新されました。 - #{item['link']}"
+  source = "『#{item['title']}』が更新されました。"
+  if item['link']
+    link = Googl.shorten(item['link'])
+    source = source + ' - ' + link.short_url
+  end
   label_text = "RSS"
   Idobata::Message.create(source: source, label: { type: :warning, text: label_text })
   puts "SEND: #{source}"

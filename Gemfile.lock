@@ -3,8 +3,17 @@ GEM
   specs:
     faraday (0.8.9)
       multipart-post (~> 1.2.0)
+    googl (0.6.3)
+      httparty (~> 0.10.0)
+      json (>= 1.4.6)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     idobata (0.0.7)
       faraday (~> 0.8.8)
+    json (1.8.1)
+    multi_json (1.10.1)
+    multi_xml (0.5.5)
     multipart-post (1.2.0)
     redis (3.1.0)
 
@@ -12,5 +21,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  googl
   idobata
   redis
